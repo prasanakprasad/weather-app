@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Weather Application</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+            <h4>Simple's Weather's</h4>
+        </nav>
+    </header>
+    <div class="container pt-3 my-3 border">
+        <div class="row justify-content-center">
+            <form class="form-inline" id="form-input">
+                <label for="place" class="mr-sm-2">Location:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 place-class" placeholder="Enter Location"
+                    id="form-place">
+                <button type="submit" class="btn btn-primary mb-2" id="form-getWeather">Get Weather</button>
+                <label for="Favourite" class="mr-sm-2">Location:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter a favourite Location"
+                    id="form-fav-place">
+                <button type="button" class="btn btn-primary mb-2" id="form-favWeather">Add to Favourites</button>
+            </form>
+            <br>
+        </div>
+
+        <div class="row weather pt-3 my-3 border">
+            <!-- <div class="col-4">
+                <div class="card list-group-item border" style="width:400px" id="mycard">
+                    <div class="card-header" style="font-size:2rem"></div>
+                    <div class="card-body">
+                        <h4 class="card-title">Melbourne</h4>
+                        <p class="card-text">25<sup> oC</sup></p>
+                        <img src="http://openweathermap.org/img/wn/01d@2x.png">
+                        <p>M</p>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <script src=" js/index.js" defer>
+    </script>
+</body>
+
+</html>
