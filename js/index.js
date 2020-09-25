@@ -2,7 +2,7 @@
 //function to fetch the data from the Weather API.
 function fetchWeatherInfo(city) {
     let url = "http://api.openweathermap.org/data/2.5/weather?q=";
-    url += city + "&appid=67be3f3781487fb4955817a37e61dfb4";
+    url += city + "&appid=";
     // console.log("url is", url);
     return fetch(url).then(response => response.json());
 }
@@ -11,7 +11,7 @@ function fetchWeatherInfo(city) {
 
 function fetchWeatherInfoWithStatAndCountry(city, state, country) {
     let url = "http://api.openweathermap.org/data/2.5/weather?q=";
-    url = `${url}${city},{state},${country}&appid=67be3f3781487fb4955817a37e61dfb4`;
+    url = `${url}${city},{state},${country}&appid=`;
     // console.log("url is", url);
     return fetch(url).then(response => response.json());
 }
@@ -19,7 +19,7 @@ function fetchWeatherInfoWithStatAndCountry(city, state, country) {
 //function to fetch the data using geographical coordinates
 function fetchWeatherUsingCoord(x, y) {
     let url = "http://api.openweathermap.org/data/2.5/weather?lat=";
-    url = `${url}${x}&lon=${y}&appid=67be3f3781487fb4955817a37e61dfb4`;
+    url = `${url}${x}&lon=${y}&appid=`;
     // console.log("url is", url);
     return fetch(url).then(response => response.json());
 }
@@ -105,7 +105,7 @@ formInput.addEventListener('submit', (event) => {
     let place = document.querySelector('#form-place').value;
 
     /* let url = "http://api.openweathermap.org/data/2.5/weather?q=";
-    url += place + "&appid=67be3f3781487fb4955817a37e61dfb4"; */
+    url += place + "&appid="; */
     if (place.indexOf(',') > 0) {
         const s = place.split(',');
         place = s[0];
