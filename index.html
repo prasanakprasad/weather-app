@@ -8,33 +8,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <title>Weather Application</title>
+    <script src=" js/index.js" defer> </script>
+
+    <style>
+        footer {
+            font-family: 'Sacramento', cursive;
+
+        }
+    </style>
 </head>
 
-<body>
+<body onload="loadFavouriteCards()">
+
     <header>
-        <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <nav class="navbar navbar-expand-sm justify-content-center fixed-top" style="background-color:lightskyblue">
             <h4>Simple's Weather's</h4>
         </nav>
     </header>
-    <div class="container pt-3 my-3 border">
-        <div class="row justify-content-center">
-            <form class="form-inline" id="form-input">
+    <div class="container pt-3 my-3">
+        <div class="row pt-3 my-3 justify-content-center">
+            <form class="form-inline my-3" id="form-input">
                 <label for="place" class="mr-sm-2">Location:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2 place-class" placeholder="Enter Location"
-                    id="form-place">
-                <button type="submit" class="btn btn-primary mb-2" id="form-getWeather">Get Weather</button>
-                <label for="Favourite" class="mr-sm-2">Location:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter a favourite Location"
-                    id="form-fav-place">
-                <button type="button" class="btn btn-primary mb-2" id="form-favWeather">Add to Favourites</button>
+                <input type="text" class="form-control btn-outline-info mb-2 mr-sm-2 place-class"
+                    placeholder="Enter Location" id="form-place"
+                    title="Enter a city,State,Country for getting weather specifically">
+                <button type="submit" class="btn btn-outline-info mb-2" id="form-getWeather">Get Weather</button>
+                <button type="button" class="btn btn-outline-info mb-2" id="clean-fav-button">Clear
+                    Favourites</button>
+                <button type="button" class="btn btn-outline-info mb-2" id="form-local-button">
+                    Get Local Weather</button>
             </form>
             <br>
         </div>
-
-        <div class="row weather pt-3 my-3 border">
+        <div class="row cardList pt-3  border">
             <!-- <div class="col-4">
                 <div class="card list-group-item border" style="width:400px" id="mycard">
                     <div class="card-header" style="font-size:2rem"></div>
@@ -42,16 +51,19 @@
                         <h4 class="card-title">Melbourne</h4>
                         <p class="card-text">25<sup> oC</sup></p>
                         <img src="http://openweathermap.org/img/wn/01d@2x.png">
-                        <p>M</p>
+                        <h4>Clouds with light rain</h4>
+                        <span class="badge badge-pill badge-secondary">Secondary</span>
                     </div>
                 </div>
             </div> -->
 
         </div>
     </div>
-
-    <script src=" js/index.js" defer>
-    </script>
+    <footer>
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center fixed-bottom">
+            <h4>By Prasana Prasad</h4>
+        </nav>
+    </footer>
 </body>
 
 </html>
